@@ -46,6 +46,7 @@ const Signup = () => {
         config
       );
       console.log(data);
+      navigate("/application");
       toast({
         title: "Registration Successful",
         status: "success",
@@ -55,7 +56,6 @@ const Signup = () => {
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
-      navigate("/application");
       history.push("/app");
     } catch (error) {
       toast({
